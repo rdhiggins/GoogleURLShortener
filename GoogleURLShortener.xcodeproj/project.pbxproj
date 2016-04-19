@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
+		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
+		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
+		7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */; };
+		7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */; };
+		7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift */; };
+		7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DF078DC1CC6AC5B00DC04CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DF078BF1CC6AC5B00DC04CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF078C61CC6AC5B00DC04CF;
+			remoteInfo = GoogleURLShortener;
+		};
+		7DF078E71CC6AC5B00DC04CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DF078BF1CC6AC5B00DC04CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF078C61CC6AC5B00DC04CF;
+			remoteInfo = GoogleURLShortener;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DF078CF1CC6AC5B00DC04CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DF078D41CC6AC5B00DC04CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7DF078D61CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF078DB1CC6AC5B00DC04CF /* GoogleURLShortenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleURLShortenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerTests.swift; sourceTree = "<group>"; };
+		7DF078E11CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF078E61CC6AC5B00DC04CF /* GoogleURLShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleURLShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerUITests.swift; sourceTree = "<group>"; };
+		7DF078EC1CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DF078C41CC6AC5B00DC04CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078D81CC6AC5B00DC04CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078E31CC6AC5B00DC04CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DF078BE1CC6AC5B00DC04CF = {
+			isa = PBXGroup;
+			children = (
+				7DF078C91CC6AC5B00DC04CF /* GoogleURLShortener */,
+				7DF078DE1CC6AC5B00DC04CF /* GoogleURLShortenerTests */,
+				7DF078E91CC6AC5B00DC04CF /* GoogleURLShortenerUITests */,
+				7DF078C81CC6AC5B00DC04CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DF078C81CC6AC5B00DC04CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */,
+				7DF078DB1CC6AC5B00DC04CF /* GoogleURLShortenerTests.xctest */,
+				7DF078E61CC6AC5B00DC04CF /* GoogleURLShortenerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DF078C91CC6AC5B00DC04CF /* GoogleURLShortener */ = {
+			isa = PBXGroup;
+			children = (
+				7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */,
+				7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */,
+				7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */,
+				7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */,
+				7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */,
+				7DF078D61CC6AC5B00DC04CF /* Info.plist */,
+			);
+			path = GoogleURLShortener;
+			sourceTree = "<group>";
+		};
+		7DF078DE1CC6AC5B00DC04CF /* GoogleURLShortenerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift */,
+				7DF078E11CC6AC5B00DC04CF /* Info.plist */,
+			);
+			path = GoogleURLShortenerTests;
+			sourceTree = "<group>";
+		};
+		7DF078E91CC6AC5B00DC04CF /* GoogleURLShortenerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */,
+				7DF078EC1CC6AC5B00DC04CF /* Info.plist */,
+			);
+			path = GoogleURLShortenerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DF078C61CC6AC5B00DC04CF /* GoogleURLShortener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF078EF1CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortener" */;
+			buildPhases = (
+				7DF078C31CC6AC5B00DC04CF /* Sources */,
+				7DF078C41CC6AC5B00DC04CF /* Frameworks */,
+				7DF078C51CC6AC5B00DC04CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleURLShortener;
+			productName = GoogleURLShortener;
+			productReference = 7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DF078DA1CC6AC5B00DC04CF /* GoogleURLShortenerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF078F21CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerTests" */;
+			buildPhases = (
+				7DF078D71CC6AC5B00DC04CF /* Sources */,
+				7DF078D81CC6AC5B00DC04CF /* Frameworks */,
+				7DF078D91CC6AC5B00DC04CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DF078DD1CC6AC5B00DC04CF /* PBXTargetDependency */,
+			);
+			name = GoogleURLShortenerTests;
+			productName = GoogleURLShortenerTests;
+			productReference = 7DF078DB1CC6AC5B00DC04CF /* GoogleURLShortenerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7DF078E51CC6AC5B00DC04CF /* GoogleURLShortenerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF078F51CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerUITests" */;
+			buildPhases = (
+				7DF078E21CC6AC5B00DC04CF /* Sources */,
+				7DF078E31CC6AC5B00DC04CF /* Frameworks */,
+				7DF078E41CC6AC5B00DC04CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DF078E81CC6AC5B00DC04CF /* PBXTargetDependency */,
+			);
+			name = GoogleURLShortenerUITests;
+			productName = GoogleURLShortenerUITests;
+			productReference = 7DF078E61CC6AC5B00DC04CF /* GoogleURLShortenerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DF078BF1CC6AC5B00DC04CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Spazstik Software";
+				TargetAttributes = {
+					7DF078C61CC6AC5B00DC04CF = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7DF078DA1CC6AC5B00DC04CF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7DF078C61CC6AC5B00DC04CF;
+					};
+					7DF078E51CC6AC5B00DC04CF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7DF078C61CC6AC5B00DC04CF;
+					};
+				};
+			};
+			buildConfigurationList = 7DF078C21CC6AC5B00DC04CF /* Build configuration list for PBXProject "GoogleURLShortener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DF078BE1CC6AC5B00DC04CF;
+			productRefGroup = 7DF078C81CC6AC5B00DC04CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DF078C61CC6AC5B00DC04CF /* GoogleURLShortener */,
+				7DF078DA1CC6AC5B00DC04CF /* GoogleURLShortenerTests */,
+				7DF078E51CC6AC5B00DC04CF /* GoogleURLShortenerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DF078C51CC6AC5B00DC04CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */,
+				7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */,
+				7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078D91CC6AC5B00DC04CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078E41CC6AC5B00DC04CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DF078C31CC6AC5B00DC04CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
+				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078D71CC6AC5B00DC04CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF078E21CC6AC5B00DC04CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DF078DD1CC6AC5B00DC04CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF078C61CC6AC5B00DC04CF /* GoogleURLShortener */;
+			targetProxy = 7DF078DC1CC6AC5B00DC04CF /* PBXContainerItemProxy */;
+		};
+		7DF078E81CC6AC5B00DC04CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF078C61CC6AC5B00DC04CF /* GoogleURLShortener */;
+			targetProxy = 7DF078E71CC6AC5B00DC04CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF078CF1CC6AC5B00DC04CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF078D41CC6AC5B00DC04CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DF078ED1CC6AC5B00DC04CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7DF078EE1CC6AC5B00DC04CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DF078F01CC6AC5B00DC04CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoogleURLShortener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7DF078F11CC6AC5B00DC04CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoogleURLShortener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7DF078F31CC6AC5B00DC04CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoogleURLShortenerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleURLShortener.app/GoogleURLShortener";
+			};
+			name = Debug;
+		};
+		7DF078F41CC6AC5B00DC04CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoogleURLShortenerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleURLShortener.app/GoogleURLShortener";
+			};
+			name = Release;
+		};
+		7DF078F61CC6AC5B00DC04CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleURLShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoogleURLShortener;
+			};
+			name = Debug;
+		};
+		7DF078F71CC6AC5B00DC04CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleURLShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spazsoft.ios.tutorials.GoogleURLShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoogleURLShortener;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DF078C21CC6AC5B00DC04CF /* Build configuration list for PBXProject "GoogleURLShortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF078ED1CC6AC5B00DC04CF /* Debug */,
+				7DF078EE1CC6AC5B00DC04CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DF078EF1CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF078F01CC6AC5B00DC04CF /* Debug */,
+				7DF078F11CC6AC5B00DC04CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DF078F21CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF078F31CC6AC5B00DC04CF /* Debug */,
+				7DF078F41CC6AC5B00DC04CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DF078F51CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF078F61CC6AC5B00DC04CF /* Debug */,
+				7DF078F71CC6AC5B00DC04CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DF078BF1CC6AC5B00DC04CF /* Project object */;
+}
