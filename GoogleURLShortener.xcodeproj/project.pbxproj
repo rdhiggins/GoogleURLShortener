@@ -15,7 +15,7 @@
 		7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift */; };
 		7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */; };
 		7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078F81CC6B0BF00DC04CF /* LICENSE */; };
-		7DF078FD1CC6B97600DC04CF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078FC1CC6B97600DC04CF /* README.md */; };
+		7DF851021CC6BCDD0044384B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF851011CC6BCDD0044384B /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +51,7 @@
 		7DF078EC1CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DF078F81CC6B0BF00DC04CF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DF078FC1CC6B97600DC04CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7DF851011CC6BCDD0044384B /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */,
 				7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */,
 				7DF078D61CC6AC5B00DC04CF /* Info.plist */,
+				7DF851011CC6BCDD0044384B /* Secrets.plist */,
 			);
 			path = GoogleURLShortener;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */,
+				7DF851021CC6BCDD0044384B /* Secrets.plist in Resources */,
 				7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */,
 				7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */,
 				7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */,
@@ -264,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF078FD1CC6B97600DC04CF /* README.md in Sources */,
 				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
 			);
@@ -491,6 +493,7 @@
 				7DF078F11CC6AC5B00DC04CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DF078F21CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +502,7 @@
 				7DF078F41CC6AC5B00DC04CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DF078F51CC6AC5B00DC04CF /* Build configuration list for PBXNativeTarget "GoogleURLShortenerUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +511,7 @@
 				7DF078F71CC6AC5B00DC04CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
