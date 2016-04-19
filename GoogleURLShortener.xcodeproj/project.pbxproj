@@ -14,6 +14,8 @@
 		7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */; };
 		7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift */; };
 		7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */; };
+		7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078F81CC6B0BF00DC04CF /* LICENSE */; };
+		7DF078FB1CC6B0E900DC04CF /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078FA1CC6B0E900DC04CF /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7DF078E61CC6AC5B00DC04CF /* GoogleURLShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleURLShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerUITests.swift; sourceTree = "<group>"; };
 		7DF078EC1CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF078F81CC6B0BF00DC04CF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7DF078FA1CC6B0E900DC04CF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		7DF078BE1CC6AC5B00DC04CF = {
 			isa = PBXGroup;
 			children = (
+				7DF078FA1CC6B0E900DC04CF /* readme.md */,
+				7DF078F81CC6B0BF00DC04CF /* LICENSE */,
 				7DF078C91CC6AC5B00DC04CF /* GoogleURLShortener */,
 				7DF078DE1CC6AC5B00DC04CF /* GoogleURLShortenerTests */,
 				7DF078E91CC6AC5B00DC04CF /* GoogleURLShortenerUITests */,
@@ -187,6 +193,7 @@
 		7DF078BF1CC6AC5B00DC04CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SPZ;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Spazstik Software";
@@ -231,6 +238,7 @@
 			files = (
 				7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */,
 				7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */,
+				7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */,
 				7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
+				7DF078FB1CC6B0E900DC04CF /* readme.md in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
