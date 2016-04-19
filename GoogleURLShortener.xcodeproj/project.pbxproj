@@ -16,6 +16,7 @@
 		7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */; };
 		7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078F81CC6B0BF00DC04CF /* LICENSE */; };
 		7DF851021CC6BCDD0044384B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF851011CC6BCDD0044384B /* Secrets.plist */; };
+		7DF851051CC6CE010044384B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF851041CC6CE010044384B /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7DF078F81CC6B0BF00DC04CF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7DF078FC1CC6B97600DC04CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7DF851011CC6BCDD0044384B /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		7DF851041CC6CE010044384B /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		7DF078C91CC6AC5B00DC04CF /* GoogleURLShortener */ = {
 			isa = PBXGroup;
 			children = (
+				7DF851031CC6CDB70044384B /* PropertyLists */,
 				7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */,
 				7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */,
 				7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */,
@@ -131,6 +134,14 @@
 				7DF078EC1CC6AC5B00DC04CF /* Info.plist */,
 			);
 			path = GoogleURLShortenerUITests;
+			sourceTree = "<group>";
+		};
+		7DF851031CC6CDB70044384B /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				7DF851041CC6CE010044384B /* Secrets.swift */,
+			);
+			name = PropertyLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
+				7DF851051CC6CE010044384B /* Secrets.swift in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
