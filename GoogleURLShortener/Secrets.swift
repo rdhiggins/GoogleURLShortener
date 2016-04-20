@@ -28,6 +28,9 @@ import Foundation
 struct Secrets {
     private let filename: String!
     private var dictionary: NSDictionary?
+
+    /// This property contains the API key to use for accessing a Google API
+    let googleAPIKey: String?
     
     init(filename: String) {
         self.filename = filename
@@ -38,16 +41,12 @@ struct Secrets {
             print("There appears to be no Secrets file, or the Secrets file does not contain a dictionary")
             fatalError()
         }
-        
-        self.dictionary = plist
-    }
-    
-    var googleAPIKey: String? {
-        get {
-            guard let key = dictionary?["GoogleAPIKey"] as? String else {
-                return nil
-            }
-            return key
+
+        // Decode the API Key
+        if let apiKey = plist["GoogleAPIKey"] as? String {
+            self.googleAPIKey = apiKey
+        } else {
+            self.googleAPIKey = nil
         }
     }
 }
