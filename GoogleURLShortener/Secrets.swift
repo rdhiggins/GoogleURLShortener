@@ -27,7 +27,6 @@ import Foundation
 
 struct Secrets {
     private let filename: String!
-    private var dictionary: NSDictionary?
 
     /// This property contains the API key to use for accessing a Google API
     let googleAPIKey: String?
