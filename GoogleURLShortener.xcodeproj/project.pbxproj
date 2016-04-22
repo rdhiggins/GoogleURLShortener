@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
+		7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
+		7DA517F91CCAA05A006817AD /* GoogleURLShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */; };
+		7DA517FA1CCAA05A006817AD /* GoogleURLShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */; };
+		7DA517FB1CCAA146006817AD /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF851041CC6CE010044384B /* Secrets.swift */; };
 		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
 		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
 		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
@@ -37,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DA517F41CCAA002006817AD /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
+		7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortener.swift; sourceTree = "<group>"; };
 		7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DA517F31CCA9FE4006817AD /* WebAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7DA517F41CCAA002006817AD /* WebAPI.swift */,
+			);
+			name = WebAPI;
+			sourceTree = "<group>";
+		};
+		7DA517F71CCAA03B006817AD /* GoogleURLShortener */ = {
+			isa = PBXGroup;
+			children = (
+				7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */,
+			);
+			name = GoogleURLShortener;
+			sourceTree = "<group>";
+		};
 		7DF078BE1CC6AC5B00DC04CF = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +129,8 @@
 		7DF078C91CC6AC5B00DC04CF /* GoogleURLShortener */ = {
 			isa = PBXGroup;
 			children = (
+				7DA517F71CCAA03B006817AD /* GoogleURLShortener */,
+				7DA517F31CCA9FE4006817AD /* WebAPI */,
 				7DF851031CC6CDB70044384B /* PropertyLists */,
 				7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */,
 				7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */,
@@ -279,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
+				7DA517F91CCAA05A006817AD /* GoogleURLShortener.swift in Sources */,
 				7DF851051CC6CE010044384B /* Secrets.swift in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
+				7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */,
+				7DA517FB1CCAA146006817AD /* Secrets.swift in Sources */,
+				7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */,
+				7DA517FA1CCAA05A006817AD /* GoogleURLShortener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

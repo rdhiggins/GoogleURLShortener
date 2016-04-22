@@ -24,7 +24,6 @@
 
 import Foundation
 
-
 struct Secrets {
     private let filename: String!
 
@@ -49,3 +48,8 @@ struct Secrets {
         }
     }
 }
+
+
+
+/// Global Secrets Structure
+let sharedSecrets = Secrets(filename: "Secrets")
