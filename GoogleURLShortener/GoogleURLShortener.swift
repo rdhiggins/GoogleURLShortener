@@ -78,7 +78,7 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
     /// Function that generates the query parameter portion of the URL.
     /// Always encodes the API Key into the string.  Then optionally includes
     /// any passed parameters.
-    private func queryString(queryParameters: [String: String]? = nil) -> String {
+    func queryString(queryParameters: [String: String]? = nil) -> String {
         if let apiKey = sharedSecrets.googleAPIKey {
             var qs: String = "?key=\(apiKey)"
             
@@ -95,5 +95,4 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
         
         return ""
     }
-    
 }

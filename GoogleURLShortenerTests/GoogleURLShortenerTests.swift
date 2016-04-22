@@ -36,16 +36,9 @@ class GoogleURLShortenerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAPIKeyInsertion() {
+        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
+        
+        XCTAssert(gr.queryString() == "?key=\(sharedSecrets.googleAPIKey!)", "API Key to correctly coded \(gr.queryString()), \(sharedSecrets.googleAPIKey!)")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
