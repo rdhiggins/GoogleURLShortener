@@ -37,9 +37,7 @@ class GoogleURLTests: XCTestCase {
     }
 
     func testGoogleURL_DefaultInitialization_ShouldCreateDefaults() {
-        let gu = GoogleURL()
-
-        XCTAssertNotNil(gu)
+        _ = GoogleURL()
     }
 
     func testGoogleURL_DefaultInitialization_LongURLShouldDefaultToUnknown() {
@@ -56,6 +54,11 @@ class GoogleURLTests: XCTestCase {
 
     func testGoogleURL_InitializationLongURL_ShouldTakeLongURLOnInitialization() {
         let longURL = "http://www.google.com"
+        _ = GoogleURL(longURL: longURL)
+    }
+
+    func testGoogleURL_InitializationLongURL_LongURLShouldHaveValuePassedToInitializer() {
+        let longURL = "http://www.google.com"
         let gu = GoogleURL(longURL: longURL)
 
         XCTAssert(gu.longURL == longURL)
@@ -70,6 +73,11 @@ class GoogleURLTests: XCTestCase {
 
     func testGoogleURL_InitializationShortURL_ShouldTakeShortURLOnInitialization() {
         let shortURL = "http://www.short.com"
+        _ = GoogleURL(shortURL: shortURL)
+    }
+
+    func testGoogleURL_InitializationShortURL_ShortURLShouldHaveValuePassedToInitializer() {
+        let shortURL = "http://www.short.com"
         let gu = GoogleURL(shortURL: shortURL)
 
         XCTAssert(gu.shortURL == shortURL)
@@ -80,6 +88,23 @@ class GoogleURLTests: XCTestCase {
         let gu = GoogleURL(shortURL: shortURL)
 
         XCTAssert(gu.longURL == defaultURL)
+    }
+
+    func testGoogleURL_InitializationLongAndShortURLS_ShouldTakeBothLongAndShortURLs() {
+        let longURL = "http://www.long.com"
+        let shortURL = "http://www.short.com"
+
+        _ = GoogleURL(longURL: longURL, shortURL: shortURL)
+    }
+
+    func testGoogleURL_InitializationLongAndShortURLS_BothValuesPassedFromInitializer() {
+        let longURL = "http://www.long.com"
+        let shortURL = "http://www.short.com"
+
+        let gu = GoogleURL(longURL: longURL, shortURL: shortURL)
+
+        XCTAssert(gu.longURL == longURL)
+        XCTAssert(gu.shortURL == shortURL)
     }
 
     func testGoogleURL_LongURL_ShouldBeSettable() {

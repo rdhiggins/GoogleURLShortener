@@ -30,14 +30,14 @@ struct GoogleURL {
     var longURL: String
     var shortURL: String
 
-    init(longURL: String) {
+    init(longURL: String, shortURL: String = GoogleURL.defaultURLString) {
         self.longURL = longURL
-        self.shortURL = GoogleURL.defaultURLString
+        self.shortURL = shortURL
     }
 
-    init(shortURL: String) {
-        self.longURL = GoogleURL.defaultURLString
+    init(shortURL: String, longURL: String = GoogleURL.defaultURLString) {
         self.shortURL = shortURL
+        self.longURL = longURL
     }
 
     init() {
