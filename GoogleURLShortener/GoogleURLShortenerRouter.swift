@@ -1,5 +1,5 @@
 //
-// GoogleURLShortener.swift
+// GoogleURLShortenerRouter.swift
 // MIT License
 //
 // Copyright (c) 2016 Spazstik Software, LLC
@@ -27,7 +27,8 @@ import Foundation
 /// WebAPIRouter for the Google URL Shortener API
 enum GoogleURLShortenerRouter: WebAPIRouter {
     static let basePath  = "https://www.googleapis.com/urlshortener/v1/url"
-    
+    static var apiKey: String = ""
+
     case Shorten(longURL: String)
     case Lookup(shortURL: String)
     
@@ -79,20 +80,16 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
     /// Always encodes the API Key into the string.  Then optionally includes
     /// any passed parameters.
     func queryString(queryParameters: [String: String]? = nil) -> String {
-        if let apiKey = sharedSecrets.googleAPIKey {
-            var qs: String = "?key=\(apiKey)"
-            
-            if let p = queryParameters {
-                for (k, value) in p {
-                    if let encodedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
-                        qs += "&\(k)=\(encodedValue)"
-                    }
+        var qs: String = "?key=\(GoogleURLShortenerRouter.apiKey)"
+
+        if let p = queryParameters {
+            for (k, value) in p {
+                if let encodedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+                    qs += "&\(k)=\(encodedValue)"
                 }
             }
-            
-            return qs
         }
-        
-        return ""
+
+        return qs
     }
 }

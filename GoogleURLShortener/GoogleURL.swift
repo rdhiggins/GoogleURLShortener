@@ -1,3 +1,5 @@
+//
+// GoogleURL.swift
 // MIT License
 //
 // Copyright (c) 2016 Spazstik Software, LLC
@@ -20,25 +22,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import Foundation
 
-import XCTest
-@testable import GoogleURLShortener
 
-class GoogleURLShortenerTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+struct GoogleURL {
+    private static let defaultURLString = "unknown"
+    var longURL: String
+    var shortURL: String
+
+    init(longURL: String) {
+        self.longURL = longURL
+        self.shortURL = GoogleURL.defaultURLString
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    init(shortURL: String) {
+        self.longURL = GoogleURL.defaultURLString
+        self.shortURL = shortURL
     }
-    
-    func testAPIKeyInsertion() {
-        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
-        
-        XCTAssert(gr.queryString() == "?key=\(sharedSecrets.googleAPIKey!)", "API Key to correctly coded \(gr.queryString()), \(sharedSecrets.googleAPIKey!)")
-    }  
+
+    init() {
+        self.longURL = GoogleURL.defaultURLString
+        self.shortURL = GoogleURL.defaultURLString
+    }
 }

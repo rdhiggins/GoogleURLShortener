@@ -52,4 +52,13 @@ struct Secrets {
 
 
 /// Global Secrets Structure
-let sharedSecrets = Secrets(filename: "Secrets")
+let sharedSecrets = {
+    let s = Secrets(filename: "Secrets")
+
+    if s.googleAPIKey == nil {
+        fatalError("A Google API Key is required!")
+    }
+
+    // Initialize what needs to be initialized, like the Google API Key
+    GoogleURLShortenerRouter.apiKey = s.googleAPIKey!
+}
