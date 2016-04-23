@@ -37,24 +37,31 @@ class GoogleURLShortenerRouterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testAPIKeyInsertion_WithoutQueryParameters_AlwaysInserted() {
-        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
-        
-        XCTAssert(gr.queryString() == "?key=\(apiKey)", "API Key is not inserted when there are no query parameters")
+
+    func testQueryString_AnyConditions_ShouldStartWithQuestionMark() {
+        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.long.com")
+
+        XCTAssert(gr.queryString().hasPrefix("?"))
     }
 
-    func testAPIKeyInsertion_APIKeyValue_CanBeChanged() {
+    func testQueryString_WithoutQueryParameters_ShouldOnlyReturnAPIKey() {
+        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.long.com")
+
+        XCTAssert(gr.queryString() == "?key=\(apiKey)")
+    }
+
+    func testQueryString_APIKeyValue_CanBeChanged() {
         let customKey = "New API Key"
         GoogleURLShortenerRouter.apiKey = customKey
         let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
 
-        XCTAssert(gr.queryString().hasPrefix("?key=\(customKey)"), "API Key could not be customized")
+        XCTAssert(gr.queryString().hasPrefix("?key=\(customKey)"))
     }
 
-    func testQueryString_StartOfString_ContainsQuestionMark() {
-        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
+    func testQueryString_WithQueryParameters_ShouldReturnApiKeyAndQueryParameter() {
+        let params = ["query":"value"]
+        let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.long.com")
 
-        XCTAssert(gr.queryString().hasPrefix("?"), "queryString does not start with a question mark")
+        XCTAssert(gr.queryString(params) == "?key=\(apiKey)&query=\(params["query"]!)")
     }
 }
