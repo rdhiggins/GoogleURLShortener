@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		7D3AB74B1CCC13C800A51EBE /* GoogleURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3AB74A1CCC13C800A51EBE /* GoogleURLTests.swift */; };
 		7D3AB74E1CCC143200A51EBE /* GoogleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3AB74D1CCC143200A51EBE /* GoogleURL.swift */; };
-		7D3AB7501CCC15CB00A51EBE /* GoogleURLShortenerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */; };
 		7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
-		7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
 		7DA517F91CCAA05A006817AD /* GoogleURLShortenerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */; };
+		7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */; };
 		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
 		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
 		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
 		7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */; };
 		7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */; };
-		7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerRouterTests.swift */; };
 		7DF078EB1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */; };
 		7DF078F91CC6B0BF00DC04CF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078F81CC6B0BF00DC04CF /* LICENSE */; };
 		7DF851021CC6BCDD0044384B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DF851011CC6BCDD0044384B /* Secrets.plist */; };
@@ -47,6 +45,7 @@
 		7D3AB74D1CCC143200A51EBE /* GoogleURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURL.swift; sourceTree = "<group>"; };
 		7DA517F41CCAA002006817AD /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouter.swift; sourceTree = "<group>"; };
+		7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouterTests.swift; sourceTree = "<group>"; };
 		7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		7DF078D41CC6AC5B00DC04CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF078D61CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DF078DB1CC6AC5B00DC04CF /* GoogleURLShortenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleURLShortenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouterTests.swift; sourceTree = "<group>"; };
 		7DF078E11CC6AC5B00DC04CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DF078E61CC6AC5B00DC04CF /* GoogleURLShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleURLShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078EA1CC6AC5B00DC04CF /* GoogleURLShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerUITests.swift; sourceTree = "<group>"; };
@@ -94,7 +92,7 @@
 		7D3AB7481CCC113000A51EBE /* GoogleURLShortenerRouter */ = {
 			isa = PBXGroup;
 			children = (
-				7DF078DF1CC6AC5B00DC04CF /* GoogleURLShortenerRouterTests.swift */,
+				7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */,
 			);
 			name = GoogleURLShortenerRouter;
 			sourceTree = "<group>";
@@ -345,9 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D3AB7501CCC15CB00A51EBE /* GoogleURLShortenerRouter.swift in Sources */,
-				7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerRouterTests.swift in Sources */,
-				7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */,
+				7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */,
 				7D3AB74B1CCC13C800A51EBE /* GoogleURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
