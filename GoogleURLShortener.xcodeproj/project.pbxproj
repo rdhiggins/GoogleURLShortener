@@ -11,7 +11,6 @@
 		7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
 		7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
 		7DA517F91CCAA05A006817AD /* GoogleURLShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */; };
-		7DA517FA1CCAA05A006817AD /* GoogleURLShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortener.swift */; };
 		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
 		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
 		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
@@ -318,7 +317,6 @@
 				7DF078E01CC6AC5B00DC04CF /* GoogleURLShortenerTests.swift in Sources */,
 				7D1827AD1CCAC5A900319329 /* Secrets.swift in Sources */,
 				7DA517F61CCAA002006817AD /* WebAPI.swift in Sources */,
-				7DA517FA1CCAA05A006817AD /* GoogleURLShortener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

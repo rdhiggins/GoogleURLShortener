@@ -40,5 +40,5 @@ class GoogleURLShortenerTests: XCTestCase {
         let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.google.com")
         
         XCTAssert(gr.queryString() == "?key=\(sharedSecrets.googleAPIKey!)", "API Key to correctly coded \(gr.queryString()), \(sharedSecrets.googleAPIKey!)")
-    }
+    }  
 }
