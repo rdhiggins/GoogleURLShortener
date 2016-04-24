@@ -34,6 +34,13 @@ class GoogleURLShortenerViewController: UIViewController {
     @IBOutlet weak var lookupURLButton: UIButton!
 
 
+    // Properties
+    var googleURL: GoogleURL? {
+        didSet {
+            longURLField.text = googleURL?.longURL
+            shortURLField.text = googleURL?.shortURL
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

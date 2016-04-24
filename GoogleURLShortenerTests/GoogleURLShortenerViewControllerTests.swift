@@ -65,4 +65,22 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     func testLookupURLButton_Initialization_SetAfterViewDidLoad() {
         XCTAssertNotNil(mut.lookupURLButton)
     }
+
+    func testSetFields_MethodForSettingFields_LongURLFieldShouldHaveValueFromGoogleURLStruct() {
+        let expectedLongURL = "http://www.google.com"
+        let googleURL = GoogleURL(longURL: expectedLongURL)
+
+        mut.googleURL = googleURL
+
+        XCTAssertEqual(mut.longURLField.text, expectedLongURL)
+    }
+
+    func testSetFields_MethodForSettingFields_ShortURLFieldShouldHaveValueFromGoogleURLString() {
+        let expectedShortURL = "http://www.google.com"
+        let googleURL = GoogleURL(shortURL: expectedShortURL)
+
+        mut.googleURL = googleURL
+
+        XCTAssertEqual(mut.shortURLField.text, expectedShortURL)
+    }
 }
