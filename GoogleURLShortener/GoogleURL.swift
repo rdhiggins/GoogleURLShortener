@@ -30,6 +30,16 @@ struct GoogleURL {
     var longURL: String
     var shortURL: String
 
+    /// Returns true when the contents of the shortURL property is a valid URL
+    var isShortURLValid: Bool {
+        return isURLValid(shortURL)
+    }
+
+    /// Returns true when the contents of the longURL property is a valid URL
+    var isLongURLValid: Bool {
+        return isURLValid(longURL)
+    }
+
     init(longURL: String, shortURL: String = GoogleURL.defaultURLString) {
         self.longURL = longURL
         self.shortURL = shortURL
@@ -43,5 +53,15 @@ struct GoogleURL {
     init() {
         self.longURL = GoogleURL.defaultURLString
         self.shortURL = GoogleURL.defaultURLString
+    }
+
+
+    /// Private function used to test the validity of a string as a URL
+    private func isURLValid(path: String) -> Bool {
+        if let _ = NSURL(string: path) {
+            return true
+        }
+
+        return false
     }
 }

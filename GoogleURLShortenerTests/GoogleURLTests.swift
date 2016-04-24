@@ -124,4 +124,28 @@ class GoogleURLTests: XCTestCase {
 
         XCTAssert(gu.shortURL == expectedURL)
     }
+
+    func testGoogleURL_ShortURLValid_ShouldBeValidWhenProperURL() {
+        let gu = GoogleURL(shortURL: "http://www.google.com")
+
+        XCTAssertTrue(gu.isShortURLValid)
+    }
+
+    func testGoogleURL_ShortURLValid_ShouldNotBeValidWhenImproperURL() {
+        let gu = GoogleURL(shortURL: "not a valid url")
+
+        XCTAssertFalse(gu.isShortURLValid)
+    }
+
+    func testGoogleURL_LongURLValid_ShouldBeValidWhenProperURL() {
+        let gu = GoogleURL(longURL: "http://www.google.com")
+
+        XCTAssertTrue(gu.isLongURLValid)
+    }
+
+    func testGoogleURL_LongURLValid_ShouldNotBeValidWhenImproperURL() {
+        let gu = GoogleURL(longURL: "not a valid url")
+
+        XCTAssertFalse(gu.isLongURLValid)
+    }
 }
