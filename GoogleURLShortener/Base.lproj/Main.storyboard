@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Google URL Shortener View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleURLShortener" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoogleURLShortener" id="BYZ-38-t0r" customClass="GoogleURLShortenerViewController" customModule="GoogleURLShortener" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-ZM-zXf">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShortURL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmz-LR-KD2">
+                                <rect key="frame" x="20" y="107" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09p-eA-ner">
+                                <rect key="frame" x="20" y="69" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongURL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-3m-cuq">
+                                <rect key="frame" x="20" y="40" width="70.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqx-5x-cyg">
+                                <rect key="frame" x="529" y="174" width="51" height="30"/>
+                                <state key="normal" title="Lookup"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-lG-WH9">
+                                <rect key="frame" x="20" y="174" width="55" height="30"/>
+                                <state key="normal" title="Shorten"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="4SK-RF-icp"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7Qz-6T-yma"/>
+                            <constraint firstItem="auZ-ZM-zXf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8ae-cT-Djp"/>
+                            <constraint firstItem="Oma-lG-WH9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jpz-kO-Df8"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MGs-ZB-tGg"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="P0e-i4-qcg"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="PQx-VS-8zl"/>
+                            <constraint firstItem="auZ-ZM-zXf" firstAttribute="top" secondItem="vmz-LR-KD2" secondAttribute="bottom" constant="8" id="Q4B-3g-Yat"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="T53-kM-XpO"/>
+                            <constraint firstItem="vmz-LR-KD2" firstAttribute="top" secondItem="09p-eA-ner" secondAttribute="bottom" constant="8" id="bMv-LY-VdR"/>
+                            <constraint firstItem="Gqx-5x-cyg" firstAttribute="top" secondItem="auZ-ZM-zXf" secondAttribute="bottom" constant="8" id="bPt-Co-rZe"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cBQ-DA-Ie1"/>
+                            <constraint firstItem="09p-eA-ner" firstAttribute="top" secondItem="Dd5-3m-cuq" secondAttribute="bottom" constant="8" id="fLf-qw-xNP"/>
+                            <constraint firstItem="Dd5-3m-cuq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="luB-t0-Pcx"/>
+                            <constraint firstItem="vmz-LR-KD2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m4b-hC-zLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="auZ-ZM-zXf" secondAttribute="trailing" id="uz0-ok-VKa"/>
+                            <constraint firstItem="Oma-lG-WH9" firstAttribute="top" secondItem="auZ-ZM-zXf" secondAttribute="bottom" constant="8" id="wci-JQ-ug1"/>
+                            <constraint firstItem="Dd5-3m-cuq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="xl1-97-ZKl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gqx-5x-cyg" secondAttribute="trailing" id="yGX-uv-p7V"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4SK-RF-icp"/>
+                                <exclude reference="7Qz-6T-yma"/>
+                                <exclude reference="P0e-i4-qcg"/>
+                                <exclude reference="PQx-VS-8zl"/>
+                                <exclude reference="T53-kM-XpO"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="longURLField" destination="09p-eA-ner" id="pPO-wp-4zr"/>
+                        <outlet property="longURLLabel" destination="Dd5-3m-cuq" id="lGM-IY-5lh"/>
+                        <outlet property="lookupURLButton" destination="Gqx-5x-cyg" id="dq3-gP-UNf"/>
+                        <outlet property="shortURLField" destination="auZ-ZM-zXf" id="TNm-jp-DqQ"/>
+                        <outlet property="shortURLLabel" destination="vmz-LR-KD2" id="11K-cA-obq"/>
+                        <outlet property="shortenURLButton" destination="Oma-lG-WH9" id="5W7-KW-YFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="93" y="130"/>
         </scene>
     </scenes>
 </document>

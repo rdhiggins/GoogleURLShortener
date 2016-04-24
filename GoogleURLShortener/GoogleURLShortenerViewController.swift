@@ -1,3 +1,5 @@
+//
+// GoogleURLShortenerViewController.swift
 // MIT License
 //
 // Copyright (c) 2016 Spazstik Software, LLC
@@ -22,18 +24,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GoogleURLShortenerViewController: UIViewController {
+
+    @IBOutlet weak var longURLLabel: UILabel!
+    @IBOutlet weak var longURLField: UITextField!
+    @IBOutlet weak var shortURLLabel: UILabel!
+    @IBOutlet weak var shortURLField: UITextField!
+    @IBOutlet weak var shortenURLButton: UIButton!
+    @IBOutlet weak var lookupURLButton: UIButton!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
+        print("longText: \(self.longURLField)")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-

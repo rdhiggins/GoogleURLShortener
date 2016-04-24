@@ -14,8 +14,9 @@
 		7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */; };
 		7DDB04F51CCC3B4200E79FAB /* WebAPIErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */; };
 		7DDB04F71CCC3B7100E79FAB /* WebAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */; };
+		7DDC08D41CCD40F700D71D24 /* GoogleURLShortenerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC08D31CCD40F700D71D24 /* GoogleURLShortenerViewControllerTests.swift */; };
+		7DDC08D81CCD42A700D71D24 /* GoogleURLShortenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC08D71CCD42A700D71D24 /* GoogleURLShortenerViewController.swift */; };
 		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
-		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
 		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
 		7DF078D21CC6AC5B00DC04CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */; };
 		7DF078D51CC6AC5B00DC04CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */; };
@@ -50,9 +51,10 @@
 		7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouterTests.swift; sourceTree = "<group>"; };
 		7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrorsTests.swift; sourceTree = "<group>"; };
 		7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrors.swift; sourceTree = "<group>"; };
+		7DDC08D31CCD40F700D71D24 /* GoogleURLShortenerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerViewControllerTests.swift; sourceTree = "<group>"; };
+		7DDC08D71CCD42A700D71D24 /* GoogleURLShortenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerViewController.swift; sourceTree = "<group>"; };
 		7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DF078CF1CC6AC5B00DC04CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF078D41CC6AC5B00DC04CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,22 @@
 			name = WebAPI;
 			sourceTree = "<group>";
 		};
+		7DDC08D11CCD40A900D71D24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DDC08D71CCD42A700D71D24 /* GoogleURLShortenerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7DDC08D21CCD40BD00D71D24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DDC08D31CCD40F700D71D24 /* GoogleURLShortenerViewControllerTests.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		7DF078BE1CC6AC5B00DC04CF = {
 			isa = PBXGroup;
 			children = (
@@ -168,11 +186,11 @@
 			isa = PBXGroup;
 			children = (
 				7D3AB74C1CCC141400A51EBE /* Model */,
+				7DDC08D11CCD40A900D71D24 /* Controller */,
 				7DA517F71CCAA03B006817AD /* GoogleURLShortenerRouter */,
 				7DA517F31CCA9FE4006817AD /* WebAPI */,
 				7DF851031CC6CDB70044384B /* PropertyLists */,
 				7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */,
-				7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */,
 				7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */,
 				7DF078D11CC6AC5B00DC04CF /* Assets.xcassets */,
 				7DF078D31CC6AC5B00DC04CF /* LaunchScreen.storyboard */,
@@ -185,6 +203,7 @@
 		7DF078DE1CC6AC5B00DC04CF /* GoogleURLShortenerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7DDC08D21CCD40BD00D71D24 /* Controller */,
 				7D3AB7491CCC139100A51EBE /* Model */,
 				7D3AB7481CCC113000A51EBE /* GoogleURLShortenerRouter */,
 				7DDB04F11CCC3A3900E79FAB /* WebAPI */,
@@ -344,8 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */,
 				7DA517F91CCAA05A006817AD /* GoogleURLShortenerRouter.swift in Sources */,
+				7DDC08D81CCD42A700D71D24 /* GoogleURLShortenerViewController.swift in Sources */,
 				7DF851051CC6CE010044384B /* Secrets.swift in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
 				7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */,
@@ -360,6 +379,7 @@
 			files = (
 				7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */,
 				7DDB04F51CCC3B4200E79FAB /* WebAPIErrorsTests.swift in Sources */,
+				7DDC08D41CCD40F700D71D24 /* GoogleURLShortenerViewControllerTests.swift in Sources */,
 				7D3AB74B1CCC13C800A51EBE /* GoogleURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
