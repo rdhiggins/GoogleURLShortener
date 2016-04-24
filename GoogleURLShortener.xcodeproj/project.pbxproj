@@ -12,6 +12,8 @@
 		7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F41CCAA002006817AD /* WebAPI.swift */; };
 		7DA517F91CCAA05A006817AD /* GoogleURLShortenerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */; };
 		7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */; };
+		7DDB04F51CCC3B4200E79FAB /* WebAPIErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */; };
+		7DDB04F71CCC3B7100E79FAB /* WebAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */; };
 		7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */; };
 		7DF078CD1CC6AC5B00DC04CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */; };
 		7DF078D01CC6AC5B00DC04CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF078CE1CC6AC5B00DC04CF /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		7DA517F41CCAA002006817AD /* WebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouter.swift; sourceTree = "<group>"; };
 		7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouterTests.swift; sourceTree = "<group>"; };
+		7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrorsTests.swift; sourceTree = "<group>"; };
+		7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrors.swift; sourceTree = "<group>"; };
 		7DF078C71CC6AC5B00DC04CF /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF078CA1CC6AC5B00DC04CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF078CC1CC6AC5B00DC04CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7DA517F41CCAA002006817AD /* WebAPI.swift */,
+				7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */,
 			);
 			name = WebAPI;
 			sourceTree = "<group>";
@@ -127,6 +132,14 @@
 				7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */,
 			);
 			name = GoogleURLShortenerRouter;
+			sourceTree = "<group>";
+		};
+		7DDB04F11CCC3A3900E79FAB /* WebAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */,
+			);
+			name = WebAPI;
 			sourceTree = "<group>";
 		};
 		7DF078BE1CC6AC5B00DC04CF = {
@@ -174,6 +187,7 @@
 			children = (
 				7D3AB7491CCC139100A51EBE /* Model */,
 				7D3AB7481CCC113000A51EBE /* GoogleURLShortenerRouter */,
+				7DDB04F11CCC3A3900E79FAB /* WebAPI */,
 				7DF078E11CC6AC5B00DC04CF /* Info.plist */,
 			);
 			path = GoogleURLShortenerTests;
@@ -335,6 +349,7 @@
 				7DF851051CC6CE010044384B /* Secrets.swift in Sources */,
 				7DF078CB1CC6AC5B00DC04CF /* AppDelegate.swift in Sources */,
 				7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */,
+				7DDB04F71CCC3B7100E79FAB /* WebAPIErrors.swift in Sources */,
 				7D3AB74E1CCC143200A51EBE /* GoogleURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */,
+				7DDB04F51CCC3B4200E79FAB /* WebAPIErrorsTests.swift in Sources */,
 				7D3AB74B1CCC13C800A51EBE /* GoogleURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

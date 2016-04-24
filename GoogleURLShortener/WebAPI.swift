@@ -26,14 +26,6 @@
 import Foundation
 
 
-/// enum defining WebAPI errors
-enum WebAPIErrors {
-    case BadRequest
-    case BadStatusCode(Int)
-    case NoData
-    case NoResponse
-    case NoRequest
-}
 
 
 /// used for returning results from WebAPI calls

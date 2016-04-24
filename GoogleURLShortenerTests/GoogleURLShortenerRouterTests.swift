@@ -23,7 +23,7 @@ class GoogleURLShortenerRouterTests: XCTestCase {
         super.tearDown()
     }
 
-    func testQueryString_AnyConditions_ShouldStartWithQuestionMark() {
+    func testQueryString_QueryString_ShouldStartWithQuestionMark() {
         let gr = GoogleURLShortenerRouter.Shorten(longURL: "http://www.long.com")
 
         XCTAssert(gr.queryString().hasPrefix("?"))
