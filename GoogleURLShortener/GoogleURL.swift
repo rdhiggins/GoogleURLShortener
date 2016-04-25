@@ -24,6 +24,7 @@
 
 import UIKit
 
+private let urlRegEx = "^(http(s)?://.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$"
 
 struct GoogleURL {
     private static let defaultURLString = "unknown"
@@ -58,8 +59,18 @@ struct GoogleURL {
 
     /// Private function used to test the validity of a string as a URL
     private func isURLValid(path: String) -> Bool {
-        if let url = NSURL(string: path) {
-            return UIApplication.sharedApplication().canOpenURL(url)
+        if let regex =
+            try? NSRegularExpression(pattern: urlRegEx,
+                                     options: NSRegularExpressionOptions.CaseInsensitive) {
+            
+            
+            let match = regex.numberOfMatchesInString(path,
+                                options: .ReportCompletion, range:
+                                NSRange(location: 0, length: path.characters.count))
+            
+            if match > 0 {
+                return true
+            }
         }
 
         return false
