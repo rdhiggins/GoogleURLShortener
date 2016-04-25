@@ -41,7 +41,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongURL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-3m-cuq">
-                                <rect key="frame" x="20" y="40" width="70.5" height="21"/>
+                                <rect key="frame" x="20" y="40" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,10 +49,16 @@
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqx-5x-cyg">
                                 <rect key="frame" x="529" y="174" width="51" height="30"/>
                                 <state key="normal" title="Lookup"/>
+                                <connections>
+                                    <action selector="lookupURLRequested:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9m-8d-o44"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-lG-WH9">
                                 <rect key="frame" x="20" y="174" width="55" height="30"/>
                                 <state key="normal" title="Shorten"/>
+                                <connections>
+                                    <action selector="shortenURLRequested:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqs-bP-iSl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -111,4 +111,46 @@ class GoogleURLShortenerViewController: UIViewController {
 
         updateButtonStates()
     }
+    
+    @IBAction func shortenURLRequested(sender: AnyObject) {
+        if let lu = longURLField.text {
+            WebAPI.request(GoogleURLShortenerRouter.Shorten(longURL: lu)) { result in
+                dispatch_async(dispatch_get_main_queue()) {
+                    switch result {
+                    case let .Failure(error):
+                        print("Error need to work on this \(error)")
+                    case let .Success(data):
+                        if let json = WebAPI.parseJSON(data) {
+                            if let shortURL = json["id"] as? String {
+                                if let longURL = json["longUrl"] as? String {
+                                    self.googleURL = GoogleURL(longURL: longURL, shortURL: shortURL)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func lookupURLRequested(sender: AnyObject) {
+        if let su = shortURLField.text {
+            WebAPI.request(GoogleURLShortenerRouter.Lookup(shortURL: su)) { result in
+                dispatch_async(dispatch_get_main_queue()) {
+                    switch result {
+                    case let .Failure(error):
+                        print("Error needs work \(error)")
+                    case let .Success(data):
+                        if let json = WebAPI.parseJSON(data) {
+                            if let shortURL = json["id"] as? String {
+                                if let longURL = json["longUrl"] as? String {
+                                    self.googleURL = GoogleURL(longURL: longURL, shortURL: shortURL)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
