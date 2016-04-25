@@ -14,6 +14,7 @@
 		7DBDE5A41CCE64A700D9789E /* WebAPIOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDE5A31CCE64A700D9789E /* WebAPIOperations.swift */; };
 		7DBDE5A61CCE66BD00D9789E /* WebAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDE5A51CCE66BD00D9789E /* WebAPIRouter.swift */; };
 		7DBDE5A81CCE66F600D9789E /* WebAPIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDE5A71CCE66F600D9789E /* WebAPIResults.swift */; };
+		7DBDE5AC1CCE7AC900D9789E /* GoogleURLShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDE5AB1CCE7AC900D9789E /* GoogleURLShortener.swift */; };
 		7DDB04F01CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */; };
 		7DDB04F51CCC3B4200E79FAB /* WebAPIErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */; };
 		7DDB04F71CCC3B7100E79FAB /* WebAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */; };
@@ -54,6 +55,7 @@
 		7DBDE5A31CCE64A700D9789E /* WebAPIOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIOperations.swift; sourceTree = "<group>"; };
 		7DBDE5A51CCE66BD00D9789E /* WebAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIRouter.swift; sourceTree = "<group>"; };
 		7DBDE5A71CCE66F600D9789E /* WebAPIResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIResults.swift; sourceTree = "<group>"; };
+		7DBDE5AB1CCE7AC900D9789E /* GoogleURLShortener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortener.swift; sourceTree = "<group>"; };
 		7DDB04EF1CCC34D000E79FAB /* GoogleURLShortenerRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleURLShortenerRouterTests.swift; sourceTree = "<group>"; };
 		7DDB04F41CCC3B4200E79FAB /* WebAPIErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrorsTests.swift; sourceTree = "<group>"; };
 		7DDB04F61CCC3B7100E79FAB /* WebAPIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIErrors.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		7DA517F71CCAA03B006817AD /* GoogleURLShortenerRouter */ = {
 			isa = PBXGroup;
 			children = (
+				7DBDE5AB1CCE7AC900D9789E /* GoogleURLShortener.swift */,
 				7DA517F81CCAA05A006817AD /* GoogleURLShortenerRouter.swift */,
 			);
 			name = GoogleURLShortenerRouter;
@@ -380,6 +383,7 @@
 				7DA517F51CCAA002006817AD /* WebAPI.swift in Sources */,
 				7DBDE5A41CCE64A700D9789E /* WebAPIOperations.swift in Sources */,
 				7DDB04F71CCC3B7100E79FAB /* WebAPIErrors.swift in Sources */,
+				7DBDE5AC1CCE7AC900D9789E /* GoogleURLShortener.swift in Sources */,
 				7DBDE5A61CCE66BD00D9789E /* WebAPIRouter.swift in Sources */,
 				7D3AB74E1CCC143200A51EBE /* GoogleURL.swift in Sources */,
 			);

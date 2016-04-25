@@ -114,20 +114,14 @@ class GoogleURLShortenerViewController: UIViewController {
     
     @IBAction func shortenURLRequested(sender: AnyObject) {
         if let lu = longURLField.text {
-            WebAPI.request(GoogleURLShortenerRouter.Shorten(longURL: lu)) { result in
-                dispatch_async(dispatch_get_main_queue()) {
-                    switch result {
-                    case let .Failure(error):
-                        print("Error need to work on this \(error)")
-                    case let .Success(data):
-                        if let json = WebAPI.parseJSON(data) {
-                            if let shortURL = json["id"] as? String {
-                                if let longURL = json["longUrl"] as? String {
-                                    self.googleURL = GoogleURL(longURL: longURL, shortURL: shortURL)
-                                }
-                            }
-                        }
-                    }
+            GoogleURLShortener.requestShorten(lu) { result in
+                switch result {
+                case let .Success(googleURL):
+                    self.googleURL = googleURL
+                case .FailedParse:
+                    print("Bad Response")
+                case let .Failure(error):
+                    print("WebAPI Error \(error)")
                 }
             }
         }
@@ -135,20 +129,14 @@ class GoogleURLShortenerViewController: UIViewController {
     
     @IBAction func lookupURLRequested(sender: AnyObject) {
         if let su = shortURLField.text {
-            WebAPI.request(GoogleURLShortenerRouter.Lookup(shortURL: su)) { result in
-                dispatch_async(dispatch_get_main_queue()) {
-                    switch result {
-                    case let .Failure(error):
-                        print("Error needs work \(error)")
-                    case let .Success(data):
-                        if let json = WebAPI.parseJSON(data) {
-                            if let shortURL = json["id"] as? String {
-                                if let longURL = json["longUrl"] as? String {
-                                    self.googleURL = GoogleURL(longURL: longURL, shortURL: shortURL)
-                                }
-                            }
-                        }
-                    }
+            GoogleURLShortener.requestLookup(su) { result in
+                switch result {
+                case let .Success(googleURL):
+                    self.googleURL = googleURL
+                case .FailedParse:
+                    print("Bad Response")
+                case let .Failure(error):
+                    print("WebAPI Error \(error)")
                 }
             }
         }
