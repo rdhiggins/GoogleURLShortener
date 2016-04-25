@@ -25,30 +25,15 @@
 
 import Foundation
 
-
-
-
-/// used for returning results from WebAPI calls
-enum WebAPIResult<A, Error> {
-    case Success(A)
-    case Failure(Error)
-}
-
-enum WebAPIOperation {
-    case Get
-    case Post(data: NSData)
-}
-
-
-/// Protocol used for a WebAPI router component
-protocol WebAPIRouter {
-    var request: NSMutableURLRequest? { get }
-    var method: WebAPIOperation { get }
-}
-
-
-
+/// WebAPI structure.  Mostly a placeholder for the static methods that
+/// that the API provides.
 struct WebAPI {
+    
+    /// Method that invokes the required http operation.
+    ///
+    /// - parameter router: A WebAPIRouter object
+    /// - parameter handler: A block that is called when the operation is 
+    /// complete.
     static func request(router: WebAPIRouter, handler: (WebAPIResult<NSData, WebAPIErrors>) -> Void) {
         if let request = router.request {
             var task: NSURLSessionTask?
@@ -69,7 +54,30 @@ struct WebAPI {
             handler(WebAPIResult.Failure(.NoRequest))
         }
     }
+
+    /// Method that converts NSData to a JSON dictionary
+    ///
+    /// - parameter data: The NSData that needs to be converted
+    /// - returns: A [String: AnyObject] on success that contains the JSON
+    /// data.  Else nil if there was an error
+    static func parseJSON(data: NSData) -> [String: AnyObject]? {
+        var json: [String: AnyObject]?
+        
+        do {
+            json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject]
+        } catch _ {}
+        
+        return json
+    }
     
+    /// A private method used to parse the http response received.
+    ///
+    /// - parameter data: optional NSData parameter
+    /// - parameter response: optional NSURLResponse
+    /// - parameter error: optional NSError
+    ///
+    /// - returns: WebAPIResult<NSData, WebAPIErrors> that contains the decoded
+    /// results of the operation
     private static func parseResponse(data: NSData?, response: NSURLResponse?, error: NSError?) -> WebAPIResult<NSData, WebAPIErrors> {
         var r: WebAPIResult<NSData, WebAPIErrors>?
         
@@ -88,16 +96,5 @@ struct WebAPI {
         }
         
         return r!
-    }
-    
-    
-    static func parseJSON(data: NSData) -> [String: AnyObject]? {
-        var json: [String: AnyObject]?
-        
-        do {
-            json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject]
-        } catch _ {}
-        
-        return json
     }
 }
