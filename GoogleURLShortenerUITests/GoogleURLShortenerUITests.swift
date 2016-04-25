@@ -60,7 +60,7 @@ class GoogleURLShortenerUITests: XCTestCase {
         longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).tap()
         longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).typeText("not an url")
 
-        XCTAssertTrue(app.buttons["Shorten"].enabled)
+        XCTAssertFalse(app.buttons["Shorten"].enabled)
     }
 
     func testLookupURLButton_EnableDisable_EnabledAfterValidURLEntered() {
@@ -80,6 +80,6 @@ class GoogleURLShortenerUITests: XCTestCase {
         shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).tap()
         shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).typeText("not an url")
 
-        XCTAssertTrue(app.buttons["Lookup"].enabled)
+        XCTAssertFalse(app.buttons["Lookup"].enabled)
     }
 }
