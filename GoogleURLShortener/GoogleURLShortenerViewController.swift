@@ -39,6 +39,8 @@ class GoogleURLShortenerViewController: UIViewController {
         didSet {
             longURLField.text = googleURL?.longURL
             shortURLField.text = googleURL?.shortURL
+
+            updateButtonStates()
         }
     }
     override func viewDidLoad() {
@@ -52,7 +54,15 @@ class GoogleURLShortenerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+
+    private func updateButtonStates() {
+
+        if let gu = googleURL {
+            shortenURLButton.enabled = gu.isLongURLValid ? true : false
+            lookupURLButton.enabled = gu.isShortURLValid ? true : false
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -64,4 +74,41 @@ class GoogleURLShortenerViewController: UIViewController {
     }
     */
 
+    @IBAction func longURLEditingChanged(sender: UITextField) {
+
+        if let n = sender.text {
+            if googleURL == nil {
+                googleURL = GoogleURL(longURL: n)
+            } else {
+                googleURL?.longURL = n
+            }
+        } else {
+            if googleURL == nil {
+                googleURL = GoogleURL(longURL: "")
+            } else {
+                googleURL?.longURL = ""
+            }
+        }
+
+        updateButtonStates()
+    }
+
+    @IBAction func shortURLEditingChanged(sender: UITextField) {
+
+        if let n = sender.text {
+            if googleURL == nil {
+                googleURL = GoogleURL(shortURL: n)
+            } else {
+                googleURL?.shortURL = n
+            }
+        } else {
+            if googleURL == nil {
+                googleURL = GoogleURL(shortURL: "")
+            } else {
+                googleURL?.shortURL = ""
+            }
+        }
+
+        updateButtonStates()
+    }
 }

@@ -42,10 +42,44 @@ class GoogleURLShortenerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testShortenURLButton_EnableDisable_EnabledAfterValidURLEntered() {
+        
+        let app = XCUIApplication()
+        let longurlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"LongURL")
+        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).tap()
+        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).typeText("http://www.google.com")
+
+        XCTAssertTrue(app.buttons["Shorten"].enabled)
     }
-    
+
+    func testShortenURLButton_EnableDisable_DisabledAfterInvalidURLEntered() {
+
+        let app = XCUIApplication()
+        let longurlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"LongURL")
+        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).tap()
+        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).typeText("not an url")
+
+        XCTAssertTrue(app.buttons["Shorten"].enabled)
+    }
+
+    func testLookupURLButton_EnableDisable_EnabledAfterValidURLEntered() {
+
+        let app = XCUIApplication()
+        let shorturlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"ShortURL")
+        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).tap()
+        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).typeText("http://www.google.com")
+
+        XCTAssertTrue(app.buttons["Lookup"].enabled)
+    }
+
+    func testLookupURLButton_EnableDisable_DisabledAfterInvalidURLEntered() {
+
+        let app = XCUIApplication()
+        let shorturlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"ShortURL")
+        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).tap()
+        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).typeText("not an url")
+
+        XCTAssertTrue(app.buttons["Lookup"].enabled)
+    }
 }

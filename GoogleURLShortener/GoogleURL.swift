@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Foundation
+import UIKit
 
 
 struct GoogleURL {
@@ -58,8 +58,8 @@ struct GoogleURL {
 
     /// Private function used to test the validity of a string as a URL
     private func isURLValid(path: String) -> Bool {
-        if let _ = NSURL(string: path) {
-            return true
+        if let url = NSURL(string: path) {
+            return UIApplication.sharedApplication().canOpenURL(url)
         }
 
         return false
