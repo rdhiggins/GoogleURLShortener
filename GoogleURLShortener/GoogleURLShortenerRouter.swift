@@ -25,13 +25,14 @@
 import Foundation
 
 /// WebAPIRouter for the Google URL Shortener API
-enum GoogleURLShortenerRouter: WebAPIRouter {
+enum GoogleURLShortenerRouter {
     static let basePath  = "https://www.googleapis.com/urlshortener/v1/url"
     static var apiKey: String = ""
 
-    case Shorten(longURL: String)
-    case Lookup(shortURL: String)
+    case Shorten(longURL: String)       // Shorten a long URL
+    case Lookup(shortURL: String)       // Lookup the short version of a long URL
     
+    /// property that gives the url
     var url: NSURL? {
         switch self {
         case .Shorten:
@@ -41,6 +42,34 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
         }
     }
     
+    /// Function that generates the query parameter portion of the URL.
+    /// Always encodes the API Key into the string.  Then optionally includes
+    /// any passed parameters.
+    ///
+    /// - parameter queryParameters: A [String: String]? dictionary of
+    /// query parameters to encode into the url
+    /// - returns: a url represented as a String
+    func queryString(queryParameters: [String: String]? = nil) -> String {
+        var qs: String = "?key=\(GoogleURLShortenerRouter.apiKey)"
+
+        if let p = queryParameters {
+            for (k, value) in p {
+                if let encodedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+                    qs += "&\(k)=\(encodedValue)"
+                }
+            }
+        }
+
+        return qs
+    }
+}
+
+
+
+
+extension GoogleURLShortenerRouter: WebAPIRouter {
+
+    /// WebAPIRouter protocol property that returns a NSMutableURLRequest
     var request: NSMutableURLRequest? {
         var request: NSMutableURLRequest?
         
@@ -59,7 +88,9 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
         return request
     }
     
-    var method: WebAPIOperation {
+    /// WebRouter protocol property that returns the WebAPIOperations that
+    /// is required for the requested operation
+    var method: WebAPIOperations {
         switch self {
         case let .Shorten(longURL):
             var data: NSData?
@@ -69,27 +100,9 @@ enum GoogleURLShortenerRouter: WebAPIRouter {
             }
             catch _ {}
             
-            return WebAPIOperation.Post(data: data!)
+            return WebAPIOperations.Post(data: data!)
         case .Lookup:
             return .Get
         }
-    }
-    
-    
-    /// Function that generates the query parameter portion of the URL.
-    /// Always encodes the API Key into the string.  Then optionally includes
-    /// any passed parameters.
-    func queryString(queryParameters: [String: String]? = nil) -> String {
-        var qs: String = "?key=\(GoogleURLShortenerRouter.apiKey)"
-
-        if let p = queryParameters {
-            for (k, value) in p {
-                if let encodedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
-                    qs += "&\(k)=\(encodedValue)"
-                }
-            }
-        }
-
-        return qs
     }
 }
