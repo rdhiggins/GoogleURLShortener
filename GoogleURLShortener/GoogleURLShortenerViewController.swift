@@ -116,9 +116,9 @@ class GoogleURLShortenerViewController: UIViewController {
                 case let .Success(googleURL):
                     self.googleURL = googleURL
                 case .FailedParse:
-                    print("Bad Response")
+                    self.showGoogleURLShortenerErrorMessage("Could not parse the response from the service!")
                 case let .Failure(error):
-                    print("WebAPI Error \(error)")
+                    self.showGoogleURLShortenerErrorMessage("WebAPI Error \(error)")
                 }
             }
         }
@@ -131,11 +131,18 @@ class GoogleURLShortenerViewController: UIViewController {
                 case let .Success(googleURL):
                     self.googleURL = googleURL
                 case .FailedParse:
-                    print("Bad Response")
+                    self.showGoogleURLShortenerErrorMessage("Could not parse the response from the service!")
                 case let .Failure(error):
-                    print("WebAPI Error \(error)")
+                    self.showGoogleURLShortenerErrorMessage("WebAPI Error \(error)")
                 }
             }
         }
+    }
+    
+    private func showGoogleURLShortenerErrorMessage(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
