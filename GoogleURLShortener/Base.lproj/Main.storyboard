@@ -66,6 +66,7 @@
                             <constraint firstItem="09p-eA-ner" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="4SK-RF-icp"/>
                             <constraint firstItem="09p-eA-ner" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7Qz-6T-yma"/>
                             <constraint firstItem="auZ-ZM-zXf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8ae-cT-Djp"/>
+                            <constraint firstItem="Gqx-5x-cyg" firstAttribute="leading" secondItem="Oma-lG-WH9" secondAttribute="trailing" constant="454" id="GB1-18-2zz"/>
                             <constraint firstItem="Oma-lG-WH9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jpz-kO-Df8"/>
                             <constraint firstItem="09p-eA-ner" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MGs-ZB-tGg"/>
                             <constraint firstItem="09p-eA-ner" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="P0e-i4-qcg"/>
@@ -90,6 +91,7 @@
                                 <exclude reference="P0e-i4-qcg"/>
                                 <exclude reference="PQx-VS-8zl"/>
                                 <exclude reference="T53-kM-XpO"/>
+                                <exclude reference="GB1-18-2zz"/>
                             </mask>
                         </variation>
                     </view>
