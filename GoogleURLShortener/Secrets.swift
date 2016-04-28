@@ -41,7 +41,7 @@ struct Secrets {
         }
 
         // Decode the API Key
-        if let apiKey = plist["GoogleAPIKey"] as? String {
+        if let apiKey = plist["GoogleAPIKey"] as? String where !apiKey.isEmpty {
             self.googleAPIKey = apiKey
         } else {
             self.googleAPIKey = nil
