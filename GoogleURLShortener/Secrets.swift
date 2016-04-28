@@ -50,7 +50,6 @@ struct Secrets {
 }
 
 
-
 /// Global Secrets Structure
 let sharedSecrets = {
     let s = Secrets(filename: "Secrets")
