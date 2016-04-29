@@ -1,5 +1,5 @@
 # GoogleURLShortener
-This repository contains a example application for the tutorial [How To Rill Your Own Alamofire Style API Library](http://www.spazstik-software.com/blog/article/how-to-roll-your-own-alamofire-style-api-library).
+This repository contains a example application for the tutorial [How To Roll Your Own Alamofire Style API Library](http://www.spazstik-software.com/blog/article/how-to-roll-your-own-alamofire-style-api-library).
 
 This example requires a API key that grants access to the Google URL Shortener service.  This key will need to be included in a Secrets.plist file using the key “GoogleAPIKey”.
 
