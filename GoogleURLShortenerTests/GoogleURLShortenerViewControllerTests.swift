@@ -32,7 +32,7 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
         super.setUp()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        mut = storyboard.instantiateViewControllerWithIdentifier("GoogleURLShortener") as! GoogleURLShortenerViewController
+        mut = storyboard.instantiateViewController(withIdentifier: "GoogleURLShortener") as! GoogleURLShortenerViewController
 
         _ = mut.view                    // Trigger ViewDidLoad
     }
@@ -63,7 +63,7 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     }
 
     func testShortenURLButton_Initialization_DisabledAfterViewDidLoad() {
-        XCTAssertFalse(mut.shortenURLButton.enabled)
+        XCTAssertFalse(mut.shortenURLButton.isEnabled)
     }
 
     func testLookupURLButton_Initialization_SetAfterViewDidLoad() {
@@ -71,7 +71,7 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     }
 
     func testLookupURLButton_Initialization_DisabledAfterViewDidLoad() {
-        XCTAssertFalse(mut.lookupURLButton.enabled)
+        XCTAssertFalse(mut.lookupURLButton.isEnabled)
     }
 
     func testSetFields_MethodForSettingFields_LongURLFieldShouldHaveValueFromGoogleURLStruct() {
@@ -95,36 +95,36 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     func testShorternerButton_EnabledDisabled_EnabledWhenValidURLInLongURL() {
         let googleURL = GoogleURL(longURL: "http://www.google.com")
 
-        mut.shortenURLButton.enabled = false
+        mut.shortenURLButton.isEnabled = false
         mut.googleURL = googleURL
 
-        XCTAssertTrue(mut.shortenURLButton.enabled)
+        XCTAssertTrue(mut.shortenURLButton.isEnabled)
     }
 
     func testShorternerButton_EnabledDisabled_DisabledWhenInvalidURLInLongURL() {
         let googleURL = GoogleURL(longURL: "not an url")
 
-        mut.shortenURLButton.enabled = true
+        mut.shortenURLButton.isEnabled = true
         mut.googleURL = googleURL
 
-        XCTAssertFalse(mut.shortenURLButton.enabled)
+        XCTAssertFalse(mut.shortenURLButton.isEnabled)
     }
 
     func testLookupButton_EnabledDisabled_EnabledWhenValidURLInLongURL() {
         let googleURL = GoogleURL(shortURL: "http://www.google.com")
 
-        mut.lookupURLButton.enabled = false
+        mut.lookupURLButton.isEnabled = false
         mut.googleURL = googleURL
 
-        XCTAssertTrue(mut.lookupURLButton.enabled)
+        XCTAssertTrue(mut.lookupURLButton.isEnabled)
     }
 
     func testLookupButton_EnabledDisabled_DisabledWhenInvalidURLInLongURL() {
         let googleURL = GoogleURL(shortURL: "not an url")
 
-        mut.lookupURLButton.enabled = true
+        mut.lookupURLButton.isEnabled = true
         mut.googleURL = googleURL
 
-        XCTAssertFalse(mut.lookupURLButton.enabled)
+        XCTAssertFalse(mut.lookupURLButton.isEnabled)
     }
 }

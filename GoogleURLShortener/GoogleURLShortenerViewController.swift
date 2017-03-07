@@ -53,11 +53,11 @@ class GoogleURLShortenerViewController: UIViewController {
     }
 
 
-    private func updateButtonStates() {
+    fileprivate func updateButtonStates() {
 
         if let gu = googleURL {
-            shortenURLButton.enabled = gu.isLongURLValid ? true : false
-            lookupURLButton.enabled = gu.isShortURLValid ? true : false
+            shortenURLButton.isEnabled = gu.isLongURLValid ? true : false
+            lookupURLButton.isEnabled = gu.isShortURLValid ? true : false
         }
     }
 
@@ -71,7 +71,7 @@ class GoogleURLShortenerViewController: UIViewController {
     }
     */
 
-    @IBAction func longURLEditingChanged(sender: UITextField) {
+    @IBAction func longURLEditingChanged(_ sender: UITextField) {
 
         if let n = sender.text {
             if googleURL == nil {
@@ -90,7 +90,7 @@ class GoogleURLShortenerViewController: UIViewController {
         updateButtonStates()
     }
 
-    @IBAction func shortURLEditingChanged(sender: UITextField) {
+    @IBAction func shortURLEditingChanged(_ sender: UITextField) {
 
         if let n = sender.text {
             if googleURL == nil {
@@ -109,40 +109,40 @@ class GoogleURLShortenerViewController: UIViewController {
         updateButtonStates()
     }
     
-    @IBAction func shortenURLRequested(sender: AnyObject) {
+    @IBAction func shortenURLRequested(_ sender: AnyObject) {
         if let lu = longURLField.text {
             GoogleURLShortener.requestShorten(lu) { result in
                 switch result {
-                case let .Success(googleURL):
+                case let .success(googleURL):
                     self.googleURL = googleURL
-                case .FailedParse:
+                case .failedParse:
                     self.showGoogleURLShortenerErrorMessage("Could not parse the response from the service!")
-                case let .Failure(error):
+                case let .failure(error):
                     self.showGoogleURLShortenerErrorMessage("WebAPI Error \(error)")
                 }
             }
         }
     }
     
-    @IBAction func lookupURLRequested(sender: AnyObject) {
+    @IBAction func lookupURLRequested(_ sender: AnyObject) {
         if let su = shortURLField.text {
             GoogleURLShortener.requestLookup(su) { result in
                 switch result {
-                case let .Success(googleURL):
+                case let .success(googleURL):
                     self.googleURL = googleURL
-                case .FailedParse:
+                case .failedParse:
                     self.showGoogleURLShortenerErrorMessage("Could not parse the response from the service!")
-                case let .Failure(error):
+                case let .failure(error):
                     self.showGoogleURLShortenerErrorMessage("WebAPI Error \(error)")
                 }
             }
         }
     }
     
-    private func showGoogleURLShortenerErrorMessage(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    fileprivate func showGoogleURLShortenerErrorMessage(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

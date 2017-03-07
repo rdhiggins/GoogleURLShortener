@@ -26,55 +26,55 @@ import Foundation
 
 /// Returns the results of a GoogleURLShortener request
 enum GoogleURLShortenerResults<A, Error> {
-    case Success(A)
-    case FailedParse
-    case Failure(Error)
+    case success(A)
+    case failedParse
+    case failure(Error)
 }
 
 typealias GUSResult = GoogleURLShortenerResults<GoogleURL,WebAPIErrors>
 
 struct GoogleURLShortener {
     
-    static func requestShorten(longURL: String, handler: (GUSResult) -> Void) {
+    static func requestShorten(_ longURL: String, handler: @escaping (GUSResult) -> Void) {
         
-        WebAPI.request(GoogleURLShortenerRouter.Shorten(longURL: longURL)) { result in
+        WebAPI.request(GoogleURLShortenerRouter.shorten(longURL: longURL)) { result in
             callHandler(parseResponse(result), handler: handler)
         }
     }
     
     
-    static func requestLookup(shortURL: String, handler: (GUSResult) -> Void) {
+    static func requestLookup(_ shortURL: String, handler: @escaping (GUSResult) -> Void) {
         
-        WebAPI.request(GoogleURLShortenerRouter.Lookup(shortURL: shortURL)) { result in
+        WebAPI.request(GoogleURLShortenerRouter.lookup(shortURL: shortURL)) { result in
             callHandler(parseResponse(result), handler: handler)
         }
     }
     
     
-    private static func callHandler(result: GUSResult, handler: (GUSResult) -> Void) {
-        dispatch_async(dispatch_get_main_queue()) {
+    fileprivate static func callHandler(_ result: GUSResult, handler: @escaping (GUSResult) -> Void) {
+        DispatchQueue.main.async {
             handler(result)
         }
     }
     
-    private static func parseResponse(result: WebAPIResult<NSData, WebAPIErrors>) -> GUSResult {
+    fileprivate static func parseResponse(_ result: WebAPIResult<Data, WebAPIErrors>) -> GUSResult {
         var r: GUSResult?
         
         switch result {
-        case let .Failure(error):
-            r = GUSResult.Failure(error)
-        case let .Success(data):
+        case let .failure(error):
+            r = GUSResult.failure(error)
+        case let .success(data):
             if let gu = parseJSONData(data) {
-                r = GUSResult.Success(gu)
+                r = GUSResult.success(gu)
             } else {
-                r = GUSResult.FailedParse
+                r = GUSResult.failedParse
             }
         }
 
         return r!
     }
     
-    private static func parseJSONData(data: NSData) -> GoogleURL? {
+    fileprivate static func parseJSONData(_ data: Data) -> GoogleURL? {
         
         if let json = WebAPI.parseJSON(data) {
             if let shortURL = json["id"] as? String {

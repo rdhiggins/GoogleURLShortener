@@ -46,40 +46,40 @@ class GoogleURLShortenerUITests: XCTestCase {
     func testShortenURLButton_EnableDisable_EnabledAfterValidURLEntered() {
         
         let app = XCUIApplication()
-        let longurlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"LongURL")
-        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).tap()
-        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).typeText("http://www.google.com")
+        let longurlElementsQuery = app.otherElements.containing(.staticText, identifier:"LongURL")
+        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).tap()
+        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).typeText("http://www.google.com")
 
-        XCTAssertTrue(app.buttons["Shorten"].enabled)
+        XCTAssertTrue(app.buttons["Shorten"].isEnabled)
     }
 
     func testShortenURLButton_EnableDisable_DisabledAfterInvalidURLEntered() {
 
         let app = XCUIApplication()
-        let longurlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"LongURL")
-        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).tap()
-        longurlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(0).typeText("not an url")
+        let longurlElementsQuery = app.otherElements.containing(.staticText, identifier:"LongURL")
+        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).tap()
+        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).typeText("not an url")
 
-        XCTAssertFalse(app.buttons["Shorten"].enabled)
+        XCTAssertFalse(app.buttons["Shorten"].isEnabled)
     }
 
     func testLookupURLButton_EnableDisable_EnabledAfterValidURLEntered() {
 
         let app = XCUIApplication()
-        let shorturlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"ShortURL")
-        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).tap()
-        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).typeText("http://www.google.com")
+        let shorturlElementsQuery = app.otherElements.containing(.staticText, identifier:"ShortURL")
+        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).tap()
+        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).typeText("http://www.google.com")
 
-        XCTAssertTrue(app.buttons["Lookup"].enabled)
+        XCTAssertTrue(app.buttons["Lookup"].isEnabled)
     }
 
     func testLookupURLButton_EnableDisable_DisabledAfterInvalidURLEntered() {
 
         let app = XCUIApplication()
-        let shorturlElementsQuery = app.otherElements.containingType(.StaticText, identifier:"ShortURL")
-        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).tap()
-        shorturlElementsQuery.childrenMatchingType(.TextField).elementBoundByIndex(1).typeText("not an url")
+        let shorturlElementsQuery = app.otherElements.containing(.staticText, identifier:"ShortURL")
+        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).tap()
+        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).typeText("not an url")
 
-        XCTAssertFalse(app.buttons["Lookup"].enabled)
+        XCTAssertFalse(app.buttons["Lookup"].isEnabled)
     }
 }

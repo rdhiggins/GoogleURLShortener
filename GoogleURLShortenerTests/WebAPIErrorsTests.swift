@@ -38,22 +38,22 @@ class WebAPIErrorsTests: XCTestCase {
     }
 
     func testWebPIErrors_Errors_SupportsBadRequests() {
-        _ = WebAPIErrors.BadRequest
+        _ = WebAPIErrors.badRequest
     }
 
     func testWebPIErrors_Errors_SupportsBadStatusCode() {
-        _ = WebAPIErrors.BadStatusCode(34)
+        _ = WebAPIErrors.badStatusCode(34)
     }
 
     func testWebPIErrors_Errors_SupportsNoData() {
-        _ = WebAPIErrors.NoData
+        _ = WebAPIErrors.noData
     }
 
     func testWebPIErrors_Errors_SupportsNoResponse() {
-        _ = WebAPIErrors.NoResponse
+        _ = WebAPIErrors.noResponse
     }
 
     func testWebPIErrors_Errors_SupportsNoRequest() {
-        _ = WebAPIErrors.NoRequest
+        _ = WebAPIErrors.noRequest
     }
 }

@@ -26,7 +26,7 @@ import XCTest
 @testable import GoogleURLShortener
 
 class GoogleURLTests: XCTestCase {
-    private let defaultURL = "unknown"
+    fileprivate let defaultURL = "unknown"
 
     override func setUp() {
         super.setUp()

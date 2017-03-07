@@ -26,6 +26,6 @@ import Foundation
 
 /// used for returning results from WebAPI calls
 enum WebAPIResult<A, Error> {
-    case Success(A)
-    case Failure(Error)
+    case success(A)
+    case failure(Error)
 }

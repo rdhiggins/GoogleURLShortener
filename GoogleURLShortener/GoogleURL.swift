@@ -27,7 +27,7 @@ import UIKit
 private let urlRegEx = "^(http(s)?://.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$"
 
 struct GoogleURL {
-    private static let defaultURLString = "unknown"
+    fileprivate static let defaultURLString = "unknown"
     var longURL: String
     var shortURL: String
 
@@ -58,14 +58,14 @@ struct GoogleURL {
 
 
     /// Private function used to test the validity of a string as a URL
-    private func isURLValid(path: String) -> Bool {
+    fileprivate func isURLValid(_ path: String) -> Bool {
         if let regex =
             try? NSRegularExpression(pattern: urlRegEx,
-                                     options: NSRegularExpressionOptions.CaseInsensitive) {
+                                     options: NSRegularExpression.Options.caseInsensitive) {
             
             
-            let match = regex.numberOfMatchesInString(path,
-                                options: .ReportCompletion, range:
+            let match = regex.numberOfMatches(in: path,
+                                options: .reportCompletion, range:
                                 NSRange(location: 0, length: path.characters.count))
             
             if match > 0 {

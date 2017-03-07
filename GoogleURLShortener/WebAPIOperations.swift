@@ -28,6 +28,6 @@ import Foundation
 /// enum that specifies the supported HTTP operations that WebAPI offers support
 /// for.
 enum WebAPIOperations {
-    case Get
-    case Post(data: NSData)
+    case get
+    case post(data: Data)
 }

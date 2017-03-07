@@ -27,9 +27,9 @@ import Foundation
 
 /// enum defining WebAPI errors
 enum WebAPIErrors {
-    case BadRequest
-    case BadStatusCode(Int)
-    case NoData
-    case NoResponse
-    case NoRequest
+    case badRequest
+    case badStatusCode(Int)
+    case noData
+    case noResponse
+    case noRequest
 }

@@ -29,16 +29,16 @@ enum GoogleURLShortenerRouter {
     static let basePath  = "https://www.googleapis.com/urlshortener/v1/url"
     static var apiKey: String = ""
 
-    case Shorten(longURL: String)       // Shorten a long URL
-    case Lookup(shortURL: String)       // Lookup the short version of a long URL
+    case shorten(longURL: String)       // Shorten a long URL
+    case lookup(shortURL: String)       // Lookup the short version of a long URL
     
     /// property that gives the url
-    var url: NSURL? {
+    var url: URL? {
         switch self {
-        case .Shorten:
-            return NSURL(string: GoogleURLShortenerRouter.basePath + queryString())
-        case let .Lookup(url):
-            return NSURL(string: GoogleURLShortenerRouter.basePath + queryString(["shortUrl": url]))
+        case .shorten:
+            return URL(string: GoogleURLShortenerRouter.basePath + queryString())
+        case let .lookup(url):
+            return URL(string: GoogleURLShortenerRouter.basePath + queryString(["shortUrl": url]))
         }
     }
     
@@ -49,12 +49,12 @@ enum GoogleURLShortenerRouter {
     /// - parameter queryParameters: A [String: String]? dictionary of
     /// query parameters to encode into the url
     /// - returns: a url represented as a String
-    func queryString(queryParameters: [String: String]? = nil) -> String {
+    func queryString(_ queryParameters: [String: String]? = nil) -> String {
         var qs: String = "?key=\(GoogleURLShortenerRouter.apiKey)"
 
         if let p = queryParameters {
             for (k, value) in p {
-                if let encodedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+                if let encodedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
                     qs += "&\(k)=\(encodedValue)"
                 }
             }
@@ -70,18 +70,18 @@ enum GoogleURLShortenerRouter {
 extension GoogleURLShortenerRouter: WebAPIRouter {
 
     /// WebAPIRouter protocol property that returns a NSMutableURLRequest
-    var request: NSMutableURLRequest? {
-        var request: NSMutableURLRequest?
+    var request: URLRequest? {
+        var request: URLRequest?
         
         if let url = self.url {
-            request = NSMutableURLRequest(URL: url)
+            request = URLRequest(url: url)
             
             switch self {
-            case .Shorten:
-                request?.HTTPMethod = "POST"
+            case .shorten:
+                request?.httpMethod = "POST"
                 request?.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            case .Lookup:
-                request?.HTTPMethod = "GET"
+            case .lookup:
+                request?.httpMethod = "GET"
             }
         }
         
@@ -92,17 +92,17 @@ extension GoogleURLShortenerRouter: WebAPIRouter {
     /// is required for the requested operation
     var method: WebAPIOperations {
         switch self {
-        case let .Shorten(longURL):
-            var data: NSData?
+        case let .shorten(longURL):
+            var data: Data?
             
             do {
-                data = try NSJSONSerialization.dataWithJSONObject(["longUrl": longURL], options: NSJSONWritingOptions())
+                data = try JSONSerialization.data(withJSONObject: ["longUrl": longURL], options: JSONSerialization.WritingOptions())
             }
             catch _ {}
             
-            return WebAPIOperations.Post(data: data!)
-        case .Lookup:
-            return .Get
+            return WebAPIOperations.post(data: data!)
+        case .lookup:
+            return .get
         }
     }
 }

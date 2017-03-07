@@ -34,24 +34,24 @@ struct WebAPI {
     /// - parameter router: A WebAPIRouter object
     /// - parameter handler: A block that is called when the operation is 
     /// complete.
-    static func request(router: WebAPIRouter, handler: (WebAPIResult<NSData, WebAPIErrors>) -> Void) {
+    static func request(_ router: WebAPIRouter, handler: @escaping (WebAPIResult<Data, WebAPIErrors>) -> Void) {
         if let request = router.request {
-            var task: NSURLSessionTask?
+            var task: URLSessionTask?
             
             switch router.method {
-            case .Get:
-                task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+            case .get:
+                task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+                    handler(parseResponse(data, response:  response, error: error))
+                })
+            case let .post(data):
+                task = URLSession.shared.uploadTask(with: request, from: data, completionHandler: { (data, response, error) in
                     handler(parseResponse(data, response: response, error: error))
-                }
-            case let .Post(data):
-                task = NSURLSession.sharedSession().uploadTaskWithRequest(request, fromData: data) { (data, response, error) in
-                    handler(parseResponse(data, response: response, error: error))
-                }
+                }) 
             }
             
             task?.resume()
         } else {
-            handler(WebAPIResult.Failure(.NoRequest))
+            handler(WebAPIResult.failure(.noRequest))
         }
     }
 
@@ -60,11 +60,11 @@ struct WebAPI {
     /// - parameter data: The NSData that needs to be converted
     /// - returns: A [String: AnyObject] on success that contains the JSON
     /// data.  Else nil if there was an error
-    static func parseJSON(data: NSData) -> [String: AnyObject]? {
+    static func parseJSON(_ data: Data) -> [String: AnyObject]? {
         var json: [String: AnyObject]?
         
         do {
-            json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject]
+            json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: AnyObject]
         } catch _ {}
         
         return json
@@ -78,21 +78,21 @@ struct WebAPI {
     ///
     /// - returns: WebAPIResult<NSData, WebAPIErrors> that contains the decoded
     /// results of the operation
-    private static func parseResponse(data: NSData?, response: NSURLResponse?, error: NSError?) -> WebAPIResult<NSData, WebAPIErrors> {
-        var r: WebAPIResult<NSData, WebAPIErrors>?
+    fileprivate static func parseResponse(_ data: Data?, response: URLResponse?, error: Error?) -> WebAPIResult<Data, WebAPIErrors> {
+        var r: WebAPIResult<Data, WebAPIErrors>?
         
         if error != nil {
-            r = WebAPIResult.Failure(.BadRequest)
-        } else if let rsp = response as? NSHTTPURLResponse where 200...299 ~= rsp.statusCode {
+            r = WebAPIResult.failure(.badRequest)
+        } else if let rsp = response as? HTTPURLResponse, 200...299 ~= rsp.statusCode {
             if let d = data {
-                r = WebAPIResult.Success(d)
+                r = WebAPIResult.success(d)
             } else {
-                r = WebAPIResult.Failure(.NoData)
+                r = WebAPIResult.failure(.noData)
             }
-        } else if let rsp = response as? NSHTTPURLResponse {
-            r = WebAPIResult.Failure(.BadStatusCode(rsp.statusCode))
+        } else if let rsp = response as? HTTPURLResponse {
+            r = WebAPIResult.failure(.badStatusCode(rsp.statusCode))
         } else {
-            r = WebAPIResult.Failure(.NoResponse)
+            r = WebAPIResult.failure(.noResponse)
         }
         
         return r!

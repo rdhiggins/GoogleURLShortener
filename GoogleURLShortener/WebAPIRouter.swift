@@ -32,7 +32,7 @@ protocol WebAPIRouter {
     /// Property that returns a NSMutableURLRequest configured for the
     /// operation that is going to be performed.  It is called by the 
     /// WebAPI.request function
-    var request: NSMutableURLRequest? { get }
+    var request: URLRequest? { get }
     
     /// Property that returns the WebAPIOperations value that need to be 
     /// performed.  It is called by the WebAPI.request function
