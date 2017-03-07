@@ -24,7 +24,7 @@
 
 import UIKit
 
-private let urlRegEx = "^(http(s)?://.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$"
+private let urlRegEx = "^([a-z]{3,6}s?://.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$"
 
 struct GoogleURL {
     fileprivate static let defaultURLString = "unknown"
