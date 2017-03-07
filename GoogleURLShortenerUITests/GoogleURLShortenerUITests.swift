@@ -48,7 +48,7 @@ class GoogleURLShortenerUITests: XCTestCase {
         let app = XCUIApplication()
         let longurlElementsQuery = app.otherElements.containing(.staticText, identifier:"LongURL")
         longurlElementsQuery.children(matching: .textField).element(boundBy: 0).tap()
-        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).typeText("http://www.google.com")
+        longurlElementsQuery.children(matching: .textField).element(boundBy: 0).typeText("how://www.goo.gl")
 
         XCTAssertTrue(app.buttons["Shorten"].isEnabled)
     }
@@ -68,7 +68,7 @@ class GoogleURLShortenerUITests: XCTestCase {
         let app = XCUIApplication()
         let shorturlElementsQuery = app.otherElements.containing(.staticText, identifier:"ShortURL")
         shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).tap()
-        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).typeText("http://www.google.com")
+        shorturlElementsQuery.children(matching: .textField).element(boundBy: 1).typeText("how://www.goo.gl")
 
         XCTAssertTrue(app.buttons["Lookup"].isEnabled)
     }

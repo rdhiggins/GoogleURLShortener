@@ -126,7 +126,7 @@ class GoogleURLTests: XCTestCase {
     }
 
     func testGoogleURL_ShortURLValid_ShouldBeValidWhenProperURL() {
-        let gu = GoogleURL(shortURL: "http://www.google.com")
+        let gu = GoogleURL(shortURL: "how://www.goo.gl")
 
         XCTAssertTrue(gu.isShortURLValid)
     }
@@ -138,7 +138,7 @@ class GoogleURLTests: XCTestCase {
     }
 
     func testGoogleURL_LongURLValid_ShouldBeValidWhenProperURL() {
-        let gu = GoogleURL(longURL: "http://www.google.com")
+        let gu = GoogleURL(longURL: "how://www.goo.gl")
 
         XCTAssertTrue(gu.isLongURLValid)
     }

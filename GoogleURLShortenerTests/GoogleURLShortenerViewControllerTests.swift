@@ -93,7 +93,7 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     }
 
     func testShorternerButton_EnabledDisabled_EnabledWhenValidURLInLongURL() {
-        let googleURL = GoogleURL(longURL: "http://www.google.com")
+        let googleURL = GoogleURL(longURL: "how://www.goo.gl")
 
         mut.shortenURLButton.isEnabled = false
         mut.googleURL = googleURL
@@ -111,7 +111,7 @@ class GoogleURLShortenerViewControllerTests: XCTestCase {
     }
 
     func testLookupButton_EnabledDisabled_EnabledWhenValidURLInLongURL() {
-        let googleURL = GoogleURL(shortURL: "http://www.google.com")
+        let googleURL = GoogleURL(shortURL: "how://www.goo.gl")
 
         mut.lookupURLButton.isEnabled = false
         mut.googleURL = googleURL
